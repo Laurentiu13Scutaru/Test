@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS scores (
+    id INT NOT NULL AUTO_INCREMENT,
+    player_name VARCHAR(64) NOT NULL DEFAULT 'Guest',
+    score INT NOT NULL,
+    played_at DATETIME NOT NULL,
+    PRIMARY KEY (id)
+);

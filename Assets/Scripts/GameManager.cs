@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public int BestScore { get; private set; }
     public GameConfig Config => config;
 
+    private int lastRunScore;
+
     // Normal speed at first. From hard mode score it gets faster.
     public float CurrentScrollSpeed
     {
@@ -180,6 +182,7 @@ public class GameManager : MonoBehaviour
     public void StartRun()
     {
         Score = 0;
+        lastRunScore = 0;
         State = GameState.Playing;
 
         if (effects != null)
@@ -272,6 +275,8 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        lastRunScore = Score;
+        Score = 0;
         State = GameState.GameOver;
 
         if (effects != null && bird != null)
@@ -313,6 +318,7 @@ public class GameManager : MonoBehaviour
     {
         StopAllCoroutines();
         Score = 0;
+        lastRunScore = 0;
 
         if (pipeSpawner != null)
         {
@@ -369,21 +375,28 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(config.gameOverUiDelay);
 
-        if (Score > BestScore)
+        int finalScore = lastRunScore;
+
+        if (finalScore > BestScore)
         {
-            BestScore = Score;
+            BestScore = finalScore;
             PlayerPrefs.SetInt(BestScoreKey, BestScore);
             PlayerPrefs.Save();
         }
 
+        ScoreDatabase.SaveScore(finalScore, "Guest");
+
         if (gameUi != null)
         {
-            gameUi.ShowGameOver(Score, BestScore);
+            gameUi.ShowGameOver(finalScore, BestScore);
         }
 
         if (gameAudio != null)
         {
             gameAudio.PlayDie();
         }
+
+        Score = 0;
+        lastRunScore = 0;
     }
 }
