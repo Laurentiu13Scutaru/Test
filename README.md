@@ -1,6 +1,7 @@
-# Flappy Bird: Unity Remake
-
+# Flappy Bird: Unity Remake [TEST BRANCHOFF, NOT RELATED TO ORIGINAL CREATOR]
 A complete remake of the classic Flappy Bird arcade game, built from scratch in Unity 6 with the Universal Render Pipeline in 2D mode.
+
+Made just for educational purpose.
 
 You control a small bird that is constantly pulled down by gravity. Every tap pushes it upward, and the world scrolls past from right to left. Endless pairs of green pipes come toward you, each pair separated by a narrow gap. Steering the bird through a gap scores one point. Touching a pipe or hitting the ground ends the run immediately.
 
