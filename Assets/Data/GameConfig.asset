@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87766e4bdcc3d64791f3f00b3b6791f, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: Assembly-CSharp::GameConfig
+  flapVelocity: 5.6
+  maxRiseSpeed: 8
+  maxFallSpeed: -10
+  gravityScale: 2.7
+  idleBobAmplitude: 0.18
+  idleBobSpeed: 3.4
+  rotateUpAngle: 28
+  rotateDownAngle: -90
+  rotateLerp: 8
+  flapAnimFps: 10
+  scrollSpeed: 2.55
+  groundY: -4.7
+  ceilingY: 4.85
+  pipeSpawnInterval: 1.35
+  pipeSpawnX: 7.5
+  pipeDespawnX: -8.5
+  pipeGap: 2.25
+  pipeMinCenterY: -1.15
+  pipeMaxCenterY: 2.05
+  gameOverUiDelay: 0.85
+  hardModeFromScore: 15
+  hardModeScrollMultiplier: 1.5

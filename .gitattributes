@@ -1,0 +1,33 @@
+* text=auto eol=lf
+
+# Unity text assets
+*.cs             text diff=csharp
+*.shader         text
+*.cginc          text
+*.hlsl           text
+*.unity          text
+*.prefab         text
+*.asset          text
+*.mat            text
+*.meta           text
+*.inputactions   text
+*.scenetemplate  text
+*.shadergraph    text
+*.json           text
+*.txt            text
+*.md             text
+
+# Binary assets must never be line-ending converted
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.wav  binary
+*.mp3  binary
+*.ogg  binary
+*.ttf  binary
+*.otf  binary
+*.fbx  binary
+*.unitypackage binary
+*.dll  binary
+*.pdf  binary
